@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A2043FA-A2E6-4F85-ABCF-7EE3D5291968}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Online_Banking.My.MyApplication</StartupObject>
+    <RootNamespace>Online_Banking</RootNamespace>
+    <AssemblyName>Online Banking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Online Banking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Online Banking.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Arvest Bank1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBeneficiary.Designer.vb">
+      <DependentUpon>AddBeneficiary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBeneficiary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Account.Designer.vb">
+      <DependentUpon>Add_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositAmount.Designer.vb">
+      <DependentUpon>DepositAmount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DepositAmount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.vb">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bankDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bankDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Account.Designer.vb">
+      <DependentUpon>Delete_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Beneficiary.Designer.vb">
+      <DependentUpon>Delete_Beneficiary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Beneficiary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E-cards.Designer.vb">
+      <DependentUpon>E-cards.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E-cards.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccount.Designer.vb">
+      <DependentUpon>EditAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enquiry.Designer.vb">
+      <DependentUpon>Enquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Enquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FundTransfer.Designer.vb">
+      <DependentUpon>FundTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FundTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logout.Designer.vb">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logout2.Designer.vb">
+      <DependentUpon>Logout2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logout2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.vb">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalLogin.Designer.vb">
+      <DependentUpon>PersonalLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal_Logincnf.Designer.vb">
+      <DependentUpon>Personal_Logincnf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personal_Logincnf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_and_Services.Designer.vb">
+      <DependentUpon>Product_and_Services.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product_and_Services.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources.vb" />
+    <Compile Include="StaffLogin.Designer.vb">
+      <DependentUpon>StaffLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start_page.Designer.vb">
+      <DependentUpon>Start_page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Start_page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer.Designer.vb">
+      <DependentUpon>Transfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.vb">
+      <DependentUpon>Welcome.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AccountDetails.Designer.vb">
+      <DependentUpon>AccountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeUser.Designer.vb">
+      <DependentUpon>WelcomeUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome_Admin.Designer.vb">
+      <DependentUpon>Welcome_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome_staff.Designer.vb">
+      <DependentUpon>Welcome_staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome_staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Withdraw.Designer.vb">
+      <DependentUpon>Withdraw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Withdraw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBeneficiary.resx">
+      <DependentUpon>AddBeneficiary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Account.resx">
+      <DependentUpon>Add_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositAmount.resx">
+      <DependentUpon>DepositAmount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Account.resx">
+      <DependentUpon>Delete_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Beneficiary.resx">
+      <DependentUpon>Delete_Beneficiary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E-cards.resx">
+      <DependentUpon>E-cards.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccount.resx">
+      <DependentUpon>EditAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enquiry.resx">
+      <DependentUpon>Enquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FundTransfer.resx">
+      <DependentUpon>FundTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout.resx">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout2.resx">
+      <DependentUpon>Logout2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalLogin.resx">
+      <DependentUpon>PersonalLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal_Logincnf.resx">
+      <DependentUpon>Personal_Logincnf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_and_Services.resx">
+      <DependentUpon>Product_and_Services.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffLogin.resx">
+      <DependentUpon>StaffLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start_page.resx">
+      <DependentUpon>Start_page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDetails.resx">
+      <DependentUpon>AccountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeUser.resx">
+      <DependentUpon>WelcomeUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome_Admin.resx">
+      <DependentUpon>Welcome_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome_staff.resx">
+      <DependentUpon>Welcome_staff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Withdraw.resx">
+      <DependentUpon>Withdraw.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bankDataSet11.xsc">
+      <DependentUpon>bankDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bankDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankDataSet11.xss">
+      <DependentUpon>bankDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bankDataSet2.xsc">
+      <DependentUpon>bankDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bankDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankDataSet2.xss">
+      <DependentUpon>bankDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete account72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deposit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deposit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Arvest Bank1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
